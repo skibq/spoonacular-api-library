@@ -3,3 +3,9 @@
 
 # modules
 node_modules/
+
+# GIT
+.git/
+
+# dis
+dist
