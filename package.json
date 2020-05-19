@@ -1,0 +1,25 @@
+{
+  "name": "api-library",
+  "version": "1.0.0",
+  "description": "Library to use API served from spoonacular.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skibq/spoonacular.git"
+  },
+  "keywords": [
+    "API",
+    "spoonacular",
+    "library",
+    "food"
+  ],
+  "author": "Michał Skiba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skibq/spoonacular/issues"
+  },
+  "homepage": "https://github.com/skibq/spoonacular#readme"
+}
