@@ -1,6 +1,10 @@
-import axios from 'axios';
+import { AxiosRequestConfig } from 'axios';
 
 class BaseRequest {
+  protected readonly basePath: string;
+  protected readonly basicConfig: AxiosRequestConfig;
+  protected endpointPath: string;
+
   constructor() {
     this.endpointPath = '/';
     this.basePath = 'https://api.spoonacular.com'; //todo: move it to .env file
@@ -9,16 +13,6 @@ class BaseRequest {
         apiKey: '2b87b70b0d194cbb9129daaddef330da' //todo: move it to config file or .env
       }
     }
-  }
-
-  get() {
-    const requestUrl = this.basePath + this.endpointPath;
-    return axios.get(requestUrl, this.basicConfig);
-  }
-
-  post() {
-    const requestUrl = this.basePath + this.endpointPath;
-    return axios.post(requestUrl, this.basicConfig)
   }
 }
 

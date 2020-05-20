@@ -2,7 +2,7 @@
   "name": "spoonacular-api-library",
   "version": "1.0.0",
   "description": "Library to use API served from spoonacular.com",
-  "main": "dist/main.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "build": "webpack",
     "test": "test"
@@ -27,6 +27,9 @@
     "axios": "^0.19.2"
   },
   "devDependencies": {
+    "@types/node": "^14.0.4",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   }
