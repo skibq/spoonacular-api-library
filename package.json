@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Library to use API served from spoonacular.com",
   "main": "dist/bundle.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "npx tsc",
   "scripts": {
     "build": "webpack",
+    "dev": "webpack --watch",
     "test": "test"
   },
   "repository": {
@@ -27,7 +30,7 @@
     "axios": "^0.19.2"
   },
   "devDependencies": {
-    "@types/node": "^14.0.4",
+    "@types/node": "^14.0.5",
     "ts-loader": "^7.0.4",
     "typescript": "^3.9.3",
     "webpack": "^4.43.0",

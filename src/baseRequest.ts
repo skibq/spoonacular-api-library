@@ -1,9 +1,9 @@
-import { AxiosRequestConfig } from 'axios';
+import { AxiosRequestConfig } from 'Axios';
 
 class BaseRequest {
-  protected readonly basePath: string;
-  protected readonly basicConfig: AxiosRequestConfig;
-  protected endpointPath: string;
+  public readonly basePath: string;
+  public readonly basicConfig: AxiosRequestConfig;
+  public endpointPath: string;
 
   constructor() {
     this.endpointPath = '/';

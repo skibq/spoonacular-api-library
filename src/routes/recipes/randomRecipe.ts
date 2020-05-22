@@ -2,7 +2,7 @@ import GetRequestMixin from "../../GetRequestMixin"; // todo: configure aliases 
 import BaseRequest from "../../baseRequest";
 
 class RandomRecipe extends GetRequestMixin(BaseRequest) {
-  protected endpointPath: string;
+  public endpointPath: string;
 
   constructor() {
     super();
@@ -10,4 +10,4 @@ class RandomRecipe extends GetRequestMixin(BaseRequest) {
   }
 }
 
-export default RandomRecipe;
+export const randomRecipe =  new RandomRecipe;
