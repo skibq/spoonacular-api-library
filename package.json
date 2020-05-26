@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Library to use API served from spoonacular.com",
   "main": "dist/bundle.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "prepublish": "npx tsc",
   "scripts": {
     "build": "webpack",

@@ -10,15 +10,12 @@
     "declaration": true,
     "strict": true,
     "esModuleInterop": true,
-    "baseUrl": "./",
-    "paths": {
-      "routes/*": ["src/routes/*"],
-      "src/*": ["src/*"]
-    }
+    "baseUrl": "./"
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "test"
   ]
 }
 

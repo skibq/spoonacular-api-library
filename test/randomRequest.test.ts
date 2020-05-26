@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { requestMethods } from 'src/baseRequest'
-import { randomRecipe } from 'routes/recipes/randomRecipe';
-import appConfig from 'src/config'
+import { requestMethods } from '../src/baseRequest'
+import { randomRecipe } from '../src';
+import appConfig from '../src/config'
 
 jest.mock('axios');
 

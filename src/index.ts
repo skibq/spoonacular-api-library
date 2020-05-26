@@ -1,1 +1,1 @@
-export { randomRecipe } from "routes/recipes/randomRecipe";
+export { randomRecipe } from "./routes/recipes/randomRecipe";

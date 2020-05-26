@@ -1,5 +1,5 @@
 import { AxiosRequestConfig, AxiosResponse } from 'Axios'
-import BaseRequest, { requestMethods } from "src/baseRequest";
+import BaseRequest, { requestMethods } from "../baseRequest";
 
 class PostMixin extends BaseRequest {
     public post(additionalConfig: AxiosRequestConfig = {}): Promise<AxiosResponse> {

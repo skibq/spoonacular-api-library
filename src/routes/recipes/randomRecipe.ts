@@ -1,6 +1,6 @@
-import GetMixin from "src/requestMixins/GetRequestMixin";
-import BaseRequest from "src/baseRequest";
-import { applyMixins } from "src/utils/applyMixins";
+import GetMixin from "../../requestMixins/GetRequestMixin";
+import BaseRequest from "../../baseRequest";
+import { applyMixins } from "../../utils/applyMixins";
 
 const RANDOM_RECIPE_PATH = '/recipes/random';
 
