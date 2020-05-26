@@ -1,10 +1,10 @@
-export function applyMixins<T>(derivedCtor: new() => T, baseCtors: Array<new() => T>): void  {
-    baseCtors.forEach(baseCtor => {
-        Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
+export function applyMixins<T>(classToBeExtended: new() => T, mixins: Array<new() => T>): void  {
+    mixins.forEach(mixin => {
+        Object.getOwnPropertyNames(mixin.prototype).forEach(name => {
             Object.defineProperty(
-                derivedCtor.prototype,
+                classToBeExtended.prototype,
                 name,
-                Object.getOwnPropertyDescriptor(baseCtor.prototype, name) as PropertyDescriptor
+                Object.getOwnPropertyDescriptor(mixin.prototype, name) as PropertyDescriptor
             );
         });
     });

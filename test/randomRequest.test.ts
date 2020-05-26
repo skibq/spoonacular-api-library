@@ -28,5 +28,19 @@ describe('Method get in RandomRecipe class', () => {
     return randomRecipe.get().then(({config}) => {
       expect(config.params.apiKey).toBe(appConfig.API_KEY);
     })
-  })
+  });
+
+  it('correctly extends basic configuration', () => {
+    const extraParameterValue = 'example-of-extraParameter';
+    const extraOptions: AxiosRequestConfig = {
+      params: {
+        extraParameter: extraParameterValue
+      }
+    };
+
+    return randomRecipe.get(extraOptions).then(({config}) => {
+      expect(config.params.apiKey).toBe(appConfig.API_KEY); // check if basic config is still correctly defined
+      expect(config.params.extraParameter).toBe(extraParameterValue);
+    })
+  });
 });

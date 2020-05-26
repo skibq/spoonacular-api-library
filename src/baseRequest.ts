@@ -1,5 +1,6 @@
 import axios, { AxiosRequestConfig, Method, AxiosResponse } from 'Axios';
 import appConfig from 'src/config'
+import { merge } from 'lodash'
 
 export enum requestMethods {
   GET = 'GET',
@@ -28,7 +29,7 @@ class BaseRequest {
   }
 
   private extendBasicConfig(additionalConfig: AxiosRequestConfig) {
-    return Object.assign({}, this.basicConfig, additionalConfig);
+    return merge({}, this.basicConfig, additionalConfig);
   }
 
   protected makeRequest(methodType: Method, extraSettings: AxiosRequestConfig): Promise<AxiosResponse> {
