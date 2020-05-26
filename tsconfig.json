@@ -9,7 +9,12 @@
     "moduleResolution": "node",
     "declaration": true,
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "routes/*": ["src/routes/*"],
+      "src/*": ["src/*"]
+    }
   },
   "exclude": [
     "node_modules",

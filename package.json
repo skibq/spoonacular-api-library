@@ -8,11 +8,27 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack --watch",
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skibq/spoonacular.git"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "modulePathIgnorePatterns": [
+      "dist"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "^routes(.*)$": "<rootDir>/src/routes$1",
+      "^src(.*)$": "<rootDir>/src$1"
+    }
   },
   "keywords": [
     "API",
@@ -30,8 +46,13 @@
     "axios": "^0.19.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/jest": "^25.2.3",
     "@types/node": "^14.0.5",
-    "ts-loader": "^7.0.4",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^26.0.1",
+    "ts-loader": "^7.0.5",
     "typescript": "^3.9.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"

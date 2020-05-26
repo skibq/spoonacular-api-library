@@ -1,13 +1,16 @@
-import axios from 'Axios'
-import BaseRequest from "./baseRequest"; // todo: alias
+import { AxiosRequestConfig, AxiosResponse } from 'Axios'
+import BaseRequest, { requestMethods } from "src/baseRequest";
 
-const GetMixin = (superclass: typeof BaseRequest) => class extends superclass  {
+export interface IGetMixin extends BaseRequest {
+    get: (additionalConfig?: AxiosRequestConfig) => Promise<AxiosResponse>
+}
+
+const GetMixin = (superclass: typeof BaseRequest): new() => IGetMixin => class extends superclass {
     constructor() {
         super();
     }
-    public get() {
-        const requestUrl = this.basePath + this.endpointPath;
-        return axios.get(requestUrl, this.basicConfig);
+    public get(additionalConfig: AxiosRequestConfig = {}) {
+        return this.makeRequest(requestMethods.GET, additionalConfig);
     }
 };
 

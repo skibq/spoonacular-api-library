@@ -1,8 +1,8 @@
-import GetRequestMixin from "../../GetRequestMixin"; // todo: configure aliases to use it as 'services/recepies/random'
-import BaseRequest from "../../baseRequest";
+import GetMixin from "src/GetRequestMixin";
+import BaseRequest from "src/baseRequest";
 
-class RandomRecipe extends GetRequestMixin(BaseRequest) {
-  public endpointPath: string;
+class RandomRecipe extends GetMixin(BaseRequest) {
+  protected endpointPath: string;
 
   constructor() {
     super();

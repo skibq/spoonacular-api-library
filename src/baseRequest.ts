@@ -1,18 +1,45 @@
-import { AxiosRequestConfig } from 'Axios';
+import axios, { AxiosRequestConfig, Method, AxiosResponse } from 'Axios';
+import appConfig from 'src/config'
+
+export enum requestMethods {
+  GET = 'GET',
+  POST = 'POST',
+  PUT = 'PUT',
+  DELETE = 'DELETE'
+}
 
 class BaseRequest {
-  public readonly basePath: string;
-  public readonly basicConfig: AxiosRequestConfig;
-  public endpointPath: string;
+  private readonly basePath: string;
+  private readonly basicConfig: AxiosRequestConfig;
+  protected endpointPath: string;
 
   constructor() {
     this.endpointPath = '/';
-    this.basePath = 'https://api.spoonacular.com'; //todo: move it to .env file
+    this.basePath = appConfig.API_URL;
     this.basicConfig = {
       params: {
-        apiKey: '2b87b70b0d194cbb9129daaddef330da' //todo: move it to config file or .env
+        apiKey: appConfig.API_KEY
       }
     }
+  }
+
+  private getRequestUrl() {
+    return this.basePath + this.endpointPath;
+  }
+
+  private extendBasicConfig(additionalConfig: AxiosRequestConfig) {
+    return Object.assign({}, this.basicConfig, additionalConfig);
+  }
+
+  protected makeRequest(methodType: Method, extraSettings: AxiosRequestConfig) {
+    const requestConfig = {
+      url: this.getRequestUrl(),
+      method: methodType,
+      ...extraSettings
+    };
+    const completeRequestConfig = this.extendBasicConfig(requestConfig);
+
+    return axios.request(completeRequestConfig)
   }
 }
 
