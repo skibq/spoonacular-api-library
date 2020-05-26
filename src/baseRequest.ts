@@ -13,8 +13,8 @@ class BaseRequest {
   private readonly basicConfig: AxiosRequestConfig;
   protected endpointPath: string;
 
-  constructor() {
-    this.endpointPath = '/';
+  constructor(endpointPath = '/') {
+    this.endpointPath = endpointPath;
     this.basePath = appConfig.API_URL;
     this.basicConfig = {
       params: {
