@@ -31,7 +31,7 @@ class BaseRequest {
     return Object.assign({}, this.basicConfig, additionalConfig);
   }
 
-  protected makeRequest(methodType: Method, extraSettings: AxiosRequestConfig) {
+  protected makeRequest(methodType: Method, extraSettings: AxiosRequestConfig): Promise<AxiosResponse> {
     const requestConfig = {
       url: this.getRequestUrl(),
       method: methodType,
