@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig, Method, AxiosResponse } from 'Axios';
-import { merge } from 'lodash'
+import merge from 'lodash.merge';
 import appConfig from './config'
 
 export enum requestMethods {
