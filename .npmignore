@@ -8,6 +8,18 @@ yarn-error.log*
 #IDE
 .idea/
 
+#source
+src
+
+#Development process files
+.babelrc
+.eslintignore
+.eslintrc.js
+.gitignore
+tsconfig.json
+webpack.config.js
+test
+
 # Dependency directories
 node_modules/
 
