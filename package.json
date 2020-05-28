@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skibq/spoonacular.git"
+    "url": "git+https://github.com/skibq/spoonacular-api-library.git"
   },
   "jest": {
     "moduleFileExtensions": [
