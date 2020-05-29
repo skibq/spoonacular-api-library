@@ -1,5 +1,5 @@
 const config = {
-  API_KEY: '2b87b70b0d194cbb9129daaddef330da',
+  API_KEY: '1db6418666824902aa6c301f8a22a7fc',
   API_URL: 'https://api.spoonacular.com',
 };
 
